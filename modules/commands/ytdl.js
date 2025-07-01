@@ -12,7 +12,7 @@ const YTDL_FALLBACK_API = 'http://localhost:4000/api/ytdl-v4';
 
 module.exports = {
     name: "ytdl",
-    version: "1.0.0",
+    version: "120.0",
     author: "Hridoy",
     description: "Download a YouTube video and send it to the user 📹",
     adminOnly: false,

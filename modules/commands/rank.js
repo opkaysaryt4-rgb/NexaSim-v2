@@ -7,7 +7,7 @@ const logger = require('../../includes/logger');
 
 module.exports = {
     name: "rank",
-    version: "1.0.0",
+    version: "2.0.0",
     author: "Hridoy",
     description: "Shows the rank card of the command user or a mentioned user.",
     adminOnly: false,
@@ -18,7 +18,7 @@ module.exports = {
 
     async execute({ api, event, args }) {
         if (!event || !event.threadID || !event.messageID) {
-            console.error("Invalid event object in rank command");
+            logger.error("Invalid event object in rank command");
             return api.sendMessage(`${config.bot.botName}: ❌ Invalid event data.`, event.threadID);
         }
 
@@ -45,24 +45,27 @@ module.exports = {
         }
 
         const profilePicUrl = `https://graph.facebook.com/${targetUid}/picture?width=512&height=512&access_token=6628568379|c1e620fa708a1d5696fb991c1bde5662`;
-        const rank = user.rank || 1;
+        const level = user.rank || 1;
         const xp = user.xp || 0;
-        const nextLevelXp = rank * 100;
+        const rank = user.rank_position || 1; 
+        const nextLevelXp = (level * 100) + 1000; 
 
-        const rankApiUrl = `https://nexalo-api.vercel.app/api/rank-v3?name=${encodeURIComponent(targetName)}&level=${rank}&rank=${rank}&requiredXP=${nextLevelXp}&xp=${xp}&image=${encodeURIComponent(profilePicUrl)}`;
+        const rankApiUrl = `https://sus-apis.onrender.com/api/rank-card?avatar=${encodeURIComponent(profilePicUrl)}&username=${encodeURIComponent(targetName)}&level=${level}&currentXP=${xp}&requiredXP=${nextLevelXp}&rank=${rank}`;
 
         try {
-            const rankResponse = await axios.get(rankApiUrl);
-            if (!rankResponse.data.status || !rankResponse.data.url) {
-                throw new Error("Failed to generate rank card");
-            }
+    
+            const response = await axios.get(rankApiUrl, { responseType: 'stream' });
 
-            const imageUrl = rankResponse.data.url;
-            const tempFilePath = path.join(__dirname, `../../temp/rank_${targetUid}.png`);
-            await fs.ensureDir(path.dirname(tempFilePath));
+            const tempDir = path.join(__dirname, '../../temp');
+            await fs.ensureDir(tempDir);
+            const tempFilePath = path.join(tempDir, `rank_${targetUid}_${Date.now()}.png`);
+            const writer = fs.createWriteStream(tempFilePath);
+            response.data.pipe(writer);
 
-            const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
-            await fs.writeFile(tempFilePath, imageResponse.data);
+            await new Promise((resolve, reject) => {
+                writer.on('finish', resolve);
+                writer.on('error', reject);
+            });
 
             await new Promise((resolve, reject) => {
                 api.sendMessage(
