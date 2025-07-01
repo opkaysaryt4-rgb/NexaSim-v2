@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-8">
+      
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
+                Bot Profile
+            </h1>
+            <p class="text-gray-400 text-lg">Advanced Messenger Bot Information</p>
+        </div>
+
+   
+        <div class="max-w-4xl mx-auto">
+            <div class="card-glow bg-slate-900/50 rounded-2xl p-8 mb-8 hover-scale">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+               
+                    <div class="relative">
+                        <img src="https://i.ibb.co/r22gZyVF/1813d1613e10162b1c1238001.png" 
+                             alt="Bot Avatar" 
+                             class="w-32 h-32 md:w-40 md:h-40 rounded-full avatar-glow object-cover">
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 status-online rounded-full flex items-center justify-center">
+                            <div class="w-4 h-4 bg-white rounded-full pulse-animation"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-2">CyberBot</h2>
+                        <p class="text-gray-300 text-lg mb-4">Advanced Multi-Purpose Discord Bot</p>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm border border-blue-500/30">
+                                <i class="fas fa-robot mr-1"></i>Active
+                            </span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm border border-green-500/30">
+                                <i class="fas fa-check-circle mr-1"></i>Verified
+                            </span>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                                <i class="fas fa-star mr-1"></i>Premium
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+                <div class="info-card rounded-xl p-6 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-terminal text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-200">Bot Prefix</h3>
+                    </div>
+                    <p class="text-2xl font-mono text-blue-400 bg-slate-800/50 px-4 py-2 rounded-lg">!</p>
+                    <p class="text-gray-400 text-sm mt-2">Use this prefix before commands</p>
+                </div>
+
+
+                <div class="info-card rounded-xl p-6 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-user-crown text-purple-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-200">Owner</h3>
+                    </div>
+                    <p class="text-xl font-semibold text-purple-400 mb-1">TechMaster</p>
+                    <p class="text-gray-400 text-sm">ID: 123456789012345678</p>
+                </div>
+
+                <div class="info-card rounded-xl p-6 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-green-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-200">Language</h3>
+                    </div>
+                    <p class="text-xl font-semibold text-green-400 mb-1">JavaScript</p>
+                    <p class="text-gray-400 text-sm">Node.js Runtime</p>
+                </div>
+
+              
+                <div class="info-card rounded-xl p-6 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-clock text-cyan-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-200">Uptime</h3>
+                    </div>
+                    <p class="text-xl font-bold text-cyan-400 mb-1">99.9%</p>
+                    <p class="text-gray-400 text-sm">Last 30 days</p>
+                </div>
+            </div>
+
+     
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-200">Bot Features</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="info-card rounded-lg p-4 text-center hover-scale">
+                        <i class="fas fa-music text-blue-400 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-300">Music</p>
+                    </div>
+                    <div class="info-card rounded-lg p-4 text-center hover-scale">
+                        <i class="fas fa-shield-alt text-green-400 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-300">Moderation</p>
+                    </div>
+                    <div class="info-card rounded-lg p-4 text-center hover-scale">
+                        <i class="fas fa-gamepad text-purple-400 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-300">Games</p>
+                    </div>
+                    <div class="info-card rounded-lg p-4 text-center hover-scale">
+                        <i class="fas fa-chart-line text-yellow-400 text-2xl mb-2"></i>
+                        <p class="text-sm text-gray-300">Analytics</p>
+                    </div>
+                </div>
+            </div>
+
+      
+            <div class="text-center mt-12 text-gray-400">
+                <p>&copy; 2024 CyberBot. All rights reserved.</p>
+                <p class="text-sm mt-2">Powered by Discord.js & Node.js</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

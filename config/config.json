@@ -5,6 +5,8 @@
     "selfListen": false,
     "forceLogin": true,
     "botName": "NexaSim V2",
+    "description": "NexaSim V2 is a smart and responsive Facebook Messenger chatbot developed to assist, entertain, and manage groups effectively.",
+    "avatar": "https://i.ibb.co/r22gZyVF/1813d1613e10162b1c1238001.png",
     "ownerName": "Hridoy",
     "ownerUid": "61552837791926",
     "adminUids": [

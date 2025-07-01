@@ -5,3 +5,5 @@ bin/
 includes/database/index.js
 backups/ 
 modules/commands/xvid.js
+modules/commands/play.js
+modules/commands/baby.js
