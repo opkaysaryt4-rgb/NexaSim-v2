@@ -1,6 +1,6 @@
 {
   "bot": {
-    "prefix": "!",
+    "prefix": ".",
     "listenEvents": true,
     "selfListen": false,
     "forceLogin": true,
