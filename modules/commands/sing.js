@@ -7,8 +7,8 @@ const crypto = require('crypto');
 
 // ====== CONFIG ZONE ======
 const YTSEARCH_API_URL = 'https://nexalo-api.vercel.app/api/ytsearch';
-const YTDL_PRIMARY_API = 'https://sus-apis.onrender.com/api/ytdlv3';
-const YTDL_FALLBACK_API = 'http://localhost:4000/api/ytdl-v4';
+const YTDL_PRIMARY_API = 'https://sus-apis-2.onrender.com/api/ytdlv3';
+const YTDL_FALLBACK_API = 'https://nexalo-api.vercel.app/api/ytdl-v4';
 // ==========================
 
 module.exports = {
