@@ -128,7 +128,7 @@ async function startBot() {
     await initializeThreadsAndUsers(apiInstance, db);
 
     const app = express();
-    const port = process.env.PORT || 3000; //server port need to enter here
+    const port = process.env.PORT || 8080; //server port need to enter here
     logger.info(`Starting server on port ${port}`);
 
     app.use(express.static(path.join(__dirname, 'public')));
